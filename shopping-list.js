@@ -1,27 +1,37 @@
-function ShoppingFactory(){
-    const budgetAmount = []
+function ShoppingFactory() {
+  const budgetAmount = [];
+  const errorMessage = "";
 
-    function listBudget(budgetItem){
-       var myBudget = budgetItem;
-        if(!budgetAmount.includes(myBudget)){
-            budgetAmount.push(myBudget)
-        }
+  function listBudget(item,total) {
+    if (!item.includes(total)) {
+      budgetAmount.push(item)
+    }
+  }
+
+  function getListBudget() {
+    return budgetAmount;
+  }
+
+ 
+
+  function itemBudget(total) {
+    const maxItem = getListBudget
+    if (total >= maxItem) {
+       errorMessage = "Budget Total Reached"
     }
 
-    function getListBudget(){
-        return budgetAmount;
-    }
+  }
 
-    function listSelection(selected){
-        customerList = []
-
-    }
+  function budgetError() {
+    return errorMessage
+  }
 
 
-
-  return{
+  return {
     listBudget,
     getListBudget,
-    listSelection
+    // listSelection,
+    itemBudget,
+    budgetError
   }
 }
