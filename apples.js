@@ -1,6 +1,9 @@
 
 function totalNumberSold(applesSoldList) {
-	return 0;
+	const applesSoldList1 = {}
+		
+	for  (var i = 0; i < applesSoldList1.qty; i++)
+	return applesSoldList;
 }
 
 function totalIncome(applesSoldList) {
